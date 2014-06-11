@@ -1,36 +1,9 @@
-# interop
+# Clojure/Java interop code
 
-FIXME: description
+Proof of concept using clojure to access MongoDB via the monger library:
 
-## Installation
+http://clojuremongodb.info/
 
-Download from http://example.com/FIXME.
+This example shows how to deal with using the clojure.data.json/write-str issues with the ObjectId that is specific to MongoDB.  
 
-## Usage
-
-FIXME: explanation
-
-    $ java -jar interop-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Also has examples of handling java Sets and Lists.  How to convert them clojure keywords and interact with monger to do batch uploads, and "in" queries.
