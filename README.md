@@ -14,13 +14,13 @@ A simple client accessing the compiled clojure "jar"
 
 ```
 public class MongoORM {
+
     public static void main(String[] args) {
 //    saveDeal();
 //    getDealsByIds();
 //    saveEffectiveDeals();
         getEffectiveDeals();
     }
-
 
     public static void saveDeal() {
         ObjectMapper objectMapper = new ObjectMapper();
