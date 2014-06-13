@@ -10,7 +10,7 @@
              #^{:static false} [getEffectiveDeals [java.lang.String java.lang.String java.lang.String] java.lang.String]]))
 
 (def andQuery {"$and" "queries"})
-(def tenantQuery {:id "tenantId"})
+(def tenantQuery {:tenantId "tenantId"})
 (def dealIdQuery {:deal-id {$in ["deal-ids"]}})
 (def excludedData {:_id 0})
 (def tenantIdQuery {:tenant-id "tenantId"})
@@ -26,7 +26,7 @@
 
 (defn- updateDealIdsQuery
   [tenantId dealIds]
-  (let [tenantUpdatedQuery (assoc-in tenantQuery [:id] tenantId)
+  (let [tenantUpdatedQuery (assoc-in tenantQuery [:tenantId] tenantId)
         ids (vec dealIds)
         dealIdUpdatedQuery (assoc-in dealIdQuery [:deal-id] {$in ids})
         partialQuery (vector tenantUpdatedQuery dealIdUpdatedQuery)]
